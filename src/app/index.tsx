@@ -5,8 +5,7 @@ const Index = () => {
     // return <Redirect href="memo/detail" />
     // return <Redirect href="memo/edit" />
     // return <Redirect href="memo/create" />
-    // return <Redirect href="auth/log_in" />
-    return <Redirect href="auth/sign_up" />
+    return <Redirect href="auth/log_in" />
+    // return <Redirect href="auth/sign_up" />
 }
-
 export default Index

@@ -1,4 +1,4 @@
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, Text, FlatList } from "react-native";
 import MemoListItem from "../../components/MemoListItem";
 import CircleButton from "../../components/CircleButton";
 import { useEffect, useState } from "react";
@@ -48,9 +48,13 @@ const List = (): JSX.Element => {
   return (
     <View style={styles.container}>
       <View>
-        {memos.map((memo) => {
+        <FlatList
+          data={memos}
+          renderItem={({ item }) => <MemoListItem memo={item} />}
+        />
+        {/* {memos.map((memo) => {
           return <MemoListItem memo={memo}></MemoListItem>;
-        })}
+        })} */}
       </View>
       <CircleButton onPress={handlePress}>
         <Icon name="plus" size={40} color="#fff"></Icon>
